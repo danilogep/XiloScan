@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "descricao": "Camada MCB: descritores anatômicos macroscópicos que o site do LPF NÃO publica. Chave = slug binomial (mesmo id do dataset_lpf.json). Valores devem usar os códigos de data/mcb_taxonomy.json.",
+    "versao": "0.1.0",
+    "total_esperado": 157,
+    "como_preencher": "Rode `python -m scraper.mcb_merge --stub` para gerar o esqueleto de todas as espécies do LPF, e preencha as que existem no app Madeiras Comerciais do Brasil. Campos deixados em null/[] entram no dataset com proveniencia.mcb=false e reduzem o `completeness` da espécie.",
+    "aviso": "Os 7 registros abaixo foram semeados a partir da tela 'Espécies' do app (nome científico + autor + nomes populares confirmados). Os descritores anatômicos deles ainda estão vazios — só preencha o que você conferir na ficha do app."
+  },
+  "especies": {
+    "albizia_pedicellaris": {
+      "nome_cientifico_mcb": "Albizia pedicellaris (DC.) L. Rico",
+      "nomes_populares_mcb": ["Ingá-de-porco", "carapatinho", "cazenza", "escurrega-macaco", "favinha"],
+      "dominio_fitogeografico": [], "cor_madeira": null,
+      "aneis_crescimento": null, "vasos_porosidade": null, "vasos_agrupamento": [],
+      "vasos_obstrucao": null, "tiloses_substancias": [], "parenquima_axial": null,
+      "parenquima_apotraqueal": [], "parenquima_paratraqueal": [], "raios_visibilidade": []
+    },
+    "alexa_grandiflora": {
+      "nome_cientifico_mcb": "Alexa grandiflora Ducke",
+      "nomes_populares_mcb": ["Melancieira", "sucupira-pepino"],
+      "dominio_fitogeografico": [], "cor_madeira": null,
+      "aneis_crescimento": null, "vasos_porosidade": null, "vasos_agrupamento": [],
+      "vasos_obstrucao": null, "tiloses_substancias": [], "parenquima_axial": null,
+      "parenquima_apotraqueal": [], "parenquima_paratraqueal": [], "raios_visibilidade": []
+    },
+    "allantoma_decandra": {
+      "nome_cientifico_mcb": "Allantoma decandra (Ducke) S.A. Mori, Ya Y.Huang & Prance",
+      "nomes_populares_mcb": ["Tauari", "tauari-vermelho"],
+      "dominio_fitogeografico": [], "cor_madeira": null,
+      "aneis_crescimento": null, "vasos_porosidade": null, "vasos_agrupamento": [],
+      "vasos_obstrucao": null, "tiloses_substancias": [], "parenquima_axial": null,
+      "parenquima_apotraqueal": [], "parenquima_paratraqueal": [], "raios_visibilidade": []
+    },
+    "allantoma_lineata": {
+      "nome_cientifico_mcb": "Allantoma lineata (Mart. & O. Berg) Miers",
+      "nomes_populares_mcb": ["Tauari", "tauari-vermelho", "cheru", "ripeiro-cheru", "castanha-da-serra"],
+      "dominio_fitogeografico": [], "cor_madeira": null,
+      "aneis_crescimento": null, "vasos_porosidade": null, "vasos_agrupamento": [],
+      "vasos_obstrucao": null, "tiloses_substancias": [], "parenquima_axial": null,
+      "parenquima_apotraqueal": [], "parenquima_paratraqueal": [], "raios_visibilidade": []
+    },
+    "amburana_acreana": {
+      "nome_cientifico_mcb": "Amburana acreana (Ducke) A.C. Sm.",
+      "nomes_populares_mcb": ["Cerejeira", "amburana", "amburana-de-cheiro", "cerejeira-amarela"],
+      "dominio_fitogeografico": [], "cor_madeira": null,
+      "aneis_crescimento": null, "vasos_porosidade": null, "vasos_agrupamento": [],
+      "vasos_obstrucao": null, "tiloses_substancias": [], "parenquima_axial": null,
+      "parenquima_apotraqueal": [], "parenquima_paratraqueal": [], "raios_visibilidade": []
+    },
+    "amburana_cearensis": {
+      "nome_cientifico_mcb": "Amburana cearensis (Allemão) A.C. Sm.",
+      "nomes_populares_mcb": ["Cerejeira", "amburana", "amburana-de-cheiro", "cerejeira-amarela"],
+      "dominio_fitogeografico": [], "cor_madeira": null,
+      "aneis_crescimento": null, "vasos_porosidade": null, "vasos_agrupamento": [],
+      "vasos_obstrucao": null, "tiloses_substancias": [], "parenquima_axial": null,
+      "parenquima_apotraqueal": [], "parenquima_paratraqueal": [], "raios_visibilidade": []
+    },
+    "anacardium_spruceanum": {
+      "nome_cientifico_mcb": "Anacardium spruceanum Benth. ex Engl.",
+      "nomes_populares_mcb": ["Caju-açú", "caju", "caju-da-mata", "cajuí", "cajuí-da-mata"],
+      "dominio_fitogeografico": [], "cor_madeira": null,
+      "aneis_crescimento": null, "vasos_porosidade": null, "vasos_agrupamento": [],
+      "vasos_obstrucao": null, "tiloses_substancias": [], "parenquima_axial": null,
+      "parenquima_apotraqueal": [], "parenquima_paratraqueal": [], "raios_visibilidade": []
+    }
+  }
+}

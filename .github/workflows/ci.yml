@@ -1,0 +1,65 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  backend:
+    name: Testes Python
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Instalar dependências
+        # torch em CPU: a roda padrão do PyPI traz CUDA e estoura o disco do
+        # runner. O índice CPU-only do PyTorch resolve em uma fração do tempo.
+        run: |
+          pip install --index-url https://download.pytorch.org/whl/cpu torch
+          pip install -r backend/requirements.txt -r scraper/requirements.txt
+          pip install ruff pytest-cov nbclient
+
+      - name: Ruff
+        run: ruff check .
+
+      - name: Pytest
+        # A suíte roda sem dataset e sem checkpoint: o que depende de peso
+        # treinado é pulado, o resto (parser, índice, scoring, contrato da API)
+        # roda com fixtures.
+        run: pytest -q
+
+  frontend:
+    name: Build do frontend
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run build
+
+  imagem:
+    name: Build da imagem Docker
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t xiloscan:ci .

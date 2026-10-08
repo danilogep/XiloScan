@@ -1,0 +1,53 @@
+# ── Python ────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# ── Segredos ──────────────────────────────────────────────────────────────
+.env
+*.env
+!.env.example
+
+# ── Dados pesados ─────────────────────────────────────────────────────────
+# O dataset é publicado como asset de release e instalado por
+# scripts/download_dataset.py. Nada disso entra no histórico do git.
+data/.cache/
+data/images/
+data/dataset_lpf.json
+data/efv_overlay.stub.json
+data_smoke/
+xiloscan_dataset.zip
+*.zip
+
+# Pesos do modelo e índice FAISS: gerados por train.py / build_index.py.
+backend/artifacts/
+*.pt
+*.pth
+*.faiss
+
+# ── Material de referência de terceiros ───────────────────────────────────
+# Capturas do aplicativo "Madeiras Comerciais do Brasil" (UFS/SFB), usadas só
+# como referência de projeto. Não são do XiloScan e trazem dados pessoais dos
+# autores daquele app — não devem ser redistribuídas aqui.
+docs/Screenshot_*.jpg
+docs/Screenshot_*.png
+
+# ── Frontend ──────────────────────────────────────────────────────────────
+node_modules/
+frontend/dist/
+frontend/tsconfig.tsbuildinfo
+
+# ── SO / IDE ──────────────────────────────────────────────────────────────
+.DS_Store
+.vscode/
+.idea/
+
+# ── Banco local de usuários (auth self-service) ───────────────────────────
+*.db
+*.sqlite3

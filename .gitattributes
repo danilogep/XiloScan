@@ -1,0 +1,8 @@
+# Normaliza a quebra de linha: LF no repositório, nativo no working copy.
+# Sem isso, um commit feito no Windows aparece como "arquivo inteiro alterado"
+# para quem clona no Linux.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.ipynb -text

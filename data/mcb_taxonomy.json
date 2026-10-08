@@ -1,0 +1,173 @@
+{
+  "$schema": "./mcb_taxonomy.schema.json",
+  "versao": "1.0.0",
+  "fonte": {
+    "aplicativo": "Madeiras Comerciais do Brasil (MCB) — LPF/SFB + UFS/LAVD, v1.12.1",
+    "instituicoes": ["UFS/LAVD", "Serviço Florestal Brasileiro", "LPF/SFB", "S2 Softeam"],
+    "total_especies_app": 157,
+    "banco_original": "https://www.florestal.gov.br/servicos/85-laboratorio-de-produtos-florestais-lpf/367-madeiras-comerciais-do-brasil"
+  },
+  "nota_de_confianca": "Os NOMES DAS CATEGORIAS foram lidos literalmente das telas 'Filtrar Espécies' do app (confianca=confirmado). Os RÓTULOS DAS OPÇÕES seguem a terminologia macroscópica padrão LPF/IAWA e devem ser conferidos contra o Glossário do app; enquanto não conferidos ficam com confianca=inferido. A cardinalidade (número de opções) de cada categoria foi contada nas telas e É confirmada.",
+  "categorias": [
+    {
+      "chave": "dominio_fitogeografico",
+      "rotulo": "Domínio Fitogeográfico",
+      "confianca": "confirmado",
+      "cardinalidade_observada": 5,
+      "multivalorado": true,
+      "peso_filtro_hibrido": 0.30,
+      "opcoes": [
+        { "codigo": "AMAZONIA", "rotulo": "Amazônia", "confianca": "confirmado" },
+        { "codigo": "CAATINGA", "rotulo": "Caatinga", "confianca": "confirmado" },
+        { "codigo": "CERRADO", "rotulo": "Cerrado", "confianca": "confirmado" },
+        { "codigo": "MATA_ATLANTICA", "rotulo": "Mata Atlântica", "confianca": "confirmado" },
+        { "codigo": "PAMPA", "rotulo": "Pampa", "confianca": "confirmado" },
+        { "codigo": "PANTANAL", "rotulo": "Pantanal", "confianca": "inferido", "nota": "Não visível na tela capturada; incluído por completude IBGE. Remover se o app não usar." }
+      ]
+    },
+    {
+      "chave": "cor_madeira",
+      "rotulo": "Cor da Madeira",
+      "confianca": "confirmado",
+      "cardinalidade_observada": 5,
+      "multivalorado": false,
+      "peso_filtro_hibrido": 0.25,
+      "mapeia_campo_lpf": "classificacao_cor_cerne",
+      "opcoes": [
+        { "codigo": "BRANCA_BEGE",       "rotulo": "Branca / bege-clara",        "hex_referencia": "#EFD9A8", "confianca": "inferido" },
+        { "codigo": "AMARELA",           "rotulo": "Amarela",                    "hex_referencia": "#E8B830", "confianca": "confirmado", "nota": "Valor 'Amarela' aparece literalmente no campo 'Classificação da Cor do Cerne' do LPF." },
+        { "codigo": "ROSA_AVERMELHADA",  "rotulo": "Rosada / avermelhada",       "hex_referencia": "#DC7B4E", "confianca": "inferido" },
+        { "codigo": "MARROM_AMARELADA",  "rotulo": "Marrom-amarelada / dourada", "hex_referencia": "#C08A22", "confianca": "inferido" },
+        { "codigo": "MARROM_ESCURA",     "rotulo": "Marrom a marrom-escura",     "hex_referencia": "#8A4A2A", "confianca": "inferido" }
+      ]
+    },
+    {
+      "chave": "aneis_crescimento",
+      "rotulo": "Anéis de Crescimento",
+      "confianca": "confirmado",
+      "cardinalidade_observada": 3,
+      "multivalorado": false,
+      "peso_filtro_hibrido": 0.10,
+      "mapeia_campo_lpf": "aneis_crescimento",
+      "opcoes": [
+        { "codigo": "DISTINTOS",        "rotulo": "Distintos",        "confianca": "confirmado", "sinonimos_lpf": ["distintos", "distintas"] },
+        { "codigo": "POUCO_DISTINTOS",  "rotulo": "Pouco distintos",  "confianca": "confirmado", "sinonimos_lpf": ["pouco distintos", "pouco distintas"] },
+        { "codigo": "INDISTINTOS",      "rotulo": "Indistintos / ausentes", "confianca": "confirmado", "sinonimos_lpf": ["indistintos", "indistintas", "ausentes", "não distintos"] }
+      ]
+    },
+    {
+      "chave": "vasos_porosidade",
+      "rotulo": "Vasos (Poros)",
+      "confianca": "confirmado",
+      "cardinalidade_observada": 4,
+      "multivalorado": false,
+      "peso_filtro_hibrido": 0.20,
+      "opcoes": [
+        { "codigo": "DIFUSA",            "rotulo": "Porosidade difusa (uniforme)",              "confianca": "inferido" },
+        { "codigo": "ANEL_POROSO",       "rotulo": "Anel poroso",                               "confianca": "inferido" },
+        { "codigo": "SEMI_ANEL_POROSO",  "rotulo": "Semi-anel poroso / difusa com tendência",   "confianca": "inferido" },
+        { "codigo": "NAO_VISIVEIS",      "rotulo": "Não visíveis a olho nu",                    "confianca": "inferido" }
+      ]
+    },
+    {
+      "chave": "vasos_agrupamento",
+      "rotulo": "Vasos (Agrupamento)",
+      "confianca": "confirmado",
+      "cardinalidade_observada": 4,
+      "multivalorado": true,
+      "peso_filtro_hibrido": 0.20,
+      "opcoes": [
+        { "codigo": "SOLITARIOS",         "rotulo": "Predominantemente solitários",     "confianca": "inferido" },
+        { "codigo": "MULTIPLOS_RADIAIS",  "rotulo": "Múltiplos radiais (geminados)",    "confianca": "inferido" },
+        { "codigo": "CACHOS",             "rotulo": "Em cachos / racemiformes",         "confianca": "inferido" },
+        { "codigo": "NAO_VISIVEIS",       "rotulo": "Não visíveis a olho nu",           "confianca": "inferido" }
+      ]
+    },
+    {
+      "chave": "vasos_obstrucao",
+      "rotulo": "Vasos (Obstrução)",
+      "confianca": "confirmado",
+      "cardinalidade_observada": 3,
+      "multivalorado": false,
+      "peso_filtro_hibrido": 0.15,
+      "opcoes": [
+        { "codigo": "DESOBSTRUIDOS",       "rotulo": "Desobstruídos",                        "confianca": "inferido" },
+        { "codigo": "OBSTRUIDOS_TILOS",    "rotulo": "Obstruídos por tilos",                 "confianca": "inferido" },
+        { "codigo": "OBSTRUIDOS_SUBST",    "rotulo": "Obstruídos por substâncias/depósitos", "confianca": "inferido" }
+      ]
+    },
+    {
+      "chave": "tiloses_substancias",
+      "rotulo": "Tiloses e/ou Substâncias",
+      "confianca": "confirmado",
+      "cardinalidade_observada": 5,
+      "multivalorado": true,
+      "peso_filtro_hibrido": 0.15,
+      "opcoes": [
+        { "codigo": "AUSENTES",          "rotulo": "Ausentes",                     "confianca": "inferido" },
+        { "codigo": "TILOS",             "rotulo": "Tilos",                        "confianca": "inferido" },
+        { "codigo": "SUBST_BRANCAS",     "rotulo": "Substâncias brancas",          "confianca": "inferido" },
+        { "codigo": "SUBST_AMARELAS",    "rotulo": "Substâncias amarelas",         "confianca": "inferido" },
+        { "codigo": "SUBST_ESCURAS",     "rotulo": "Substâncias escuras / gomas",  "confianca": "inferido" }
+      ]
+    },
+    {
+      "chave": "parenquima_axial",
+      "rotulo": "Parênquima Axial",
+      "confianca": "confirmado",
+      "cardinalidade_observada": 3,
+      "multivalorado": false,
+      "peso_filtro_hibrido": 0.20,
+      "opcoes": [
+        { "codigo": "AUSENTE_INDISTINTO", "rotulo": "Ausente ou indistinto", "confianca": "inferido" },
+        { "codigo": "APOTRAQUEAL",        "rotulo": "Apotraqueal",           "confianca": "confirmado" },
+        { "codigo": "PARATRAQUEAL",       "rotulo": "Paratraqueal",          "confianca": "confirmado" }
+      ]
+    },
+    {
+      "chave": "parenquima_apotraqueal",
+      "rotulo": "Parênquima Axial Apotraqueal",
+      "confianca": "confirmado",
+      "cardinalidade_observada": 3,
+      "multivalorado": true,
+      "depende_de": { "chave": "parenquima_axial", "valor": "APOTRAQUEAL" },
+      "peso_filtro_hibrido": 0.15,
+      "opcoes": [
+        { "codigo": "DIFUSO",            "rotulo": "Difuso",                        "confianca": "inferido" },
+        { "codigo": "DIFUSO_AGREGADOS",  "rotulo": "Difuso-em-agregados",           "confianca": "inferido" },
+        { "codigo": "EM_LINHAS",         "rotulo": "Em linhas / faixas (marginal)", "confianca": "inferido" }
+      ]
+    },
+    {
+      "chave": "parenquima_paratraqueal",
+      "rotulo": "Parênquima Axial Paratraqueal",
+      "confianca": "confirmado",
+      "cardinalidade_observada": 5,
+      "multivalorado": true,
+      "depende_de": { "chave": "parenquima_axial", "valor": "PARATRAQUEAL" },
+      "peso_filtro_hibrido": 0.20,
+      "opcoes": [
+        { "codigo": "ESCASSO",              "rotulo": "Escasso",              "confianca": "inferido" },
+        { "codigo": "VASICENTRICO",         "rotulo": "Vasicêntrico",         "confianca": "inferido" },
+        { "codigo": "ALIFORME",             "rotulo": "Aliforme",             "confianca": "inferido" },
+        { "codigo": "ALIFORME_CONFLUENTE",  "rotulo": "Aliforme confluente",  "confianca": "inferido" },
+        { "codigo": "EM_FAIXAS",            "rotulo": "Em faixas",            "confianca": "inferido" }
+      ]
+    },
+    {
+      "chave": "raios_visibilidade",
+      "rotulo": "Raios (Visibilidade)",
+      "confianca": "confirmado",
+      "cardinalidade_observada": 5,
+      "multivalorado": true,
+      "peso_filtro_hibrido": 0.15,
+      "opcoes": [
+        { "codigo": "OLHO_NU_TOPO",      "rotulo": "Visíveis a olho nu no topo",        "confianca": "inferido" },
+        { "codigo": "SOB_LENTE",         "rotulo": "Visíveis somente sob lente (10x)",  "confianca": "inferido" },
+        { "codigo": "ESPELHADO_TANG",    "rotulo": "Espelhado visível na face tangencial", "confianca": "inferido" },
+        { "codigo": "ESTRATIFICADOS",    "rotulo": "Estratificados",                    "confianca": "inferido" },
+        { "codigo": "NAO_VISIVEIS",      "rotulo": "Não visíveis a olho nu",            "confianca": "inferido" }
+      ]
+    }
+  ]
+}

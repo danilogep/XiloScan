@@ -1,0 +1,17 @@
+# não enviar para o build do Docker
+**/__pycache__/
+**/*.pyc
+.git/
+frontend/node_modules/
+frontend/dist/
+data/.cache/
+data/_backup*/
+data/*.stub.json
+_backup*/
+*.db
+xiloscan_dataset.zip
+docs/
+notebooks/
+scraper/
+.env
+.env.*

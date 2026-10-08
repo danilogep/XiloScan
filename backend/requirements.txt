@@ -1,0 +1,22 @@
+# XiloScan backend
+fastapi>=0.115
+uvicorn[standard]>=0.32
+python-multipart>=0.0.12
+pydantic>=2.9
+pydantic-settings>=2.6
+
+torch>=2.4          # CUDA: instale via https://pytorch.org/get-started/locally/
+timm>=1.0.9         # backbones EfficientNet-B4 / ResNet-50
+faiss-cpu>=1.9      # troque por faiss-gpu em produção com GPU
+opencv-python-headless>=4.10
+pillow>=10.4
+numpy>=1.26
+
+# cadastro / acesso (Railway + Postgres). Localmente cai em SQLite (stdlib),
+# então estes só são necessários no deploy público.
+sqlalchemy>=2.0
+psycopg[binary]>=3.2
+
+# dev
+pytest>=8.3
+httpx>=0.27

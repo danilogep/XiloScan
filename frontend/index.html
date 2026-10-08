@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>XiloScan — Identificação macroscópica de madeiras</title>
+    <meta name="description" content="Identificação macroscópica de madeiras brasileiras assistida por IA. ECAM · Produtos Florestais." />
+
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="theme-color" content="#101d33" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+
+    <!-- iOS: adicionar à tela inicial -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="XiloScan" />
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <!-- splash: aparece na hora, antes do JS/CSS carregar -->
+    <style>
+      #xs-splash{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;
+        background:radial-gradient(130% 90% at 50% -12%,#1c2f50 0%,#0f1a2e 46%,#0a1120 100%);
+        transition:opacity .45s ease;font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;-webkit-tap-highlight-color:transparent}
+      #xs-splash.hide{opacity:0;pointer-events:none}
+      #xs-splash .box{display:flex;flex-direction:column;align-items:center;text-align:center;padding:24px}
+      #xs-splash img{width:104px;height:104px;border-radius:24%;animation:xsPop .6s cubic-bezier(.2,.8,.3,1) both}
+      #xs-splash .wm{margin-top:20px;font-size:32px;font-weight:800;letter-spacing:-.015em;line-height:1}
+      #xs-splash .wm b{color:#f5f3ec}#xs-splash .wm i{font-style:normal;color:#c9a24b}
+      #xs-splash .selo{margin-top:8px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#e3c479}
+      #xs-splash .bar{margin-top:26px;width:132px;height:3px;border-radius:3px;background:#22375a;overflow:hidden}
+      #xs-splash .bar span{display:block;height:100%;width:40%;border-radius:3px;background:#c9a24b;animation:xsSlide 1.1s ease-in-out infinite}
+      @keyframes xsPop{from{opacity:0;transform:scale(.86)}to{opacity:1;transform:scale(1)}}
+      @keyframes xsSlide{0%{transform:translateX(-120%)}100%{transform:translateX(360%)}}
+      @media (prefers-reduced-motion: reduce){#xs-splash img,#xs-splash .bar span{animation:none}}
+    </style>
+  </head>
+  <body>
+    <div id="xs-splash" role="status" aria-label="Carregando XiloScan">
+      <div class="box">
+        <img src="/icon.svg" alt="" />
+        <div class="wm"><b>Xilo</b><i>Scan</i></div>
+        <div class="selo">ECAM · Produtos Florestais</div>
+        <div class="bar"><span></span></div>
+      </div>
+    </div>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

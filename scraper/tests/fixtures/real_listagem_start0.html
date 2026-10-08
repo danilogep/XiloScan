@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-br" dir="ltr"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="pt-br" dir="ltr"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="pt-br" dir="ltr"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-br" dir="ltr"> <!--<![endif]-->
+<head>
+    <!--[if lt IE 9]>
+    <script src="/templates/padraogoverno02/js/html5shiv.js"></script>
+    <![endif]-->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:200,300,400italic,400,600,800,700'  rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/templates/padraogoverno02/font-awesome/css/all.css" type='text/css'/>
+    <link rel="stylesheet" href="/templates/padraogoverno02/bootstrap/css/bootstrap.min.css" type='text/css'/>
+    <link rel="stylesheet" href="/templates/padraogoverno02/css/template.css" type='text/css'/>
+    <link rel="stylesheet" href="/templates/padraogoverno02/css/contraste.css" type='text/css'/>
+    <link rel="stylesheet" href="/templates/padraogoverno02/bootstrap/css/bootstrap-table.css" type='text/css'/>
+
+    <!--[if lt IE 10]>
+    <link rel="stylesheet" href="/templates/padraogoverno02/css/ie.css" />
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" href="/templates/padraogoverno02/css/ie8.css" />
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="/templates/padraogoverno02/css/ie7.css" />
+    <link rel="stylesheet" href="/font-awesome/css/font-awesome-ie7.min.css" />
+    <![endif]-->
+
+    		<script src="/templates/padraogoverno02/js/jquery.min.js" type="text/javascript"></script><noscript>&nbsp;<!-- item para fins de acessibilidade --></noscript>
+		<script src="/templates/padraogoverno02/bootstrap/js/bootstrap.min.js" type="text/javascript"></script><noscript>&nbsp;<!-- item para fins de acessibilidade --></noscript>
+	    <script src="/templates/padraogoverno02/js/jquery.cookie.js" type="text/javascript"></script><noscript>&nbsp;<!-- item para fins de acessibilidade --></noscript>
+	    <script src="/templates/padraogoverno02/js/template.js" type="text/javascript"></script><noscript>&nbsp;<!-- item para fins de acessibilidade --></noscript>
+		    <base href="https://lpf.florestal.gov.br/pt-br/madeiras-brasileiras" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>LPF - Laboratório de Produtos Florestais - Madeiras Brasileiras</title>
+	<link href="/templates/padraogoverno02/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="https://lpf.florestal.gov.br/media/com_madeirasbrasileiras/css/list.css" rel="stylesheet" type="text/css" />
+	<link href="https://lpf.florestal.gov.br/media/com_madeirasbrasileiras/chosen/chosen.css" rel="stylesheet" type="text/css" />
+	<link href="https://lpf.florestal.gov.br/media/com_madeirasbrasileiras/chosen/bootstrap-chosen.css" rel="stylesheet" type="text/css" />
+	<link href="/media/jui/css/jquery.searchtools.css?069e91f560725fbf665e4fd526c7b3d1" rel="stylesheet" type="text/css" />
+	<link href="/plugins/system/jcemediabox/css/jcemediabox.min.css?694e8c6cd10a5c458a4efb27d8ee5c83" rel="stylesheet" type="text/css" />
+	<link href="/plugins/system/jce/css/content.css?069e91f560725fbf665e4fd526c7b3d1" rel="stylesheet" type="text/css" />
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"ef9c7eebdc850f861859027eb47a6adb","system.paths":{"root":"","base":""}}</script>
+	<script src="/media/system/js/core.js?069e91f560725fbf665e4fd526c7b3d1" type="text/javascript"></script>
+	<script src="/media/jui/js/jquery.min.js?069e91f560725fbf665e4fd526c7b3d1" type="text/javascript"></script>
+	<script src="/media/jui/js/jquery-noconflict.js?069e91f560725fbf665e4fd526c7b3d1" type="text/javascript"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js?069e91f560725fbf665e4fd526c7b3d1" type="text/javascript"></script>
+	<script src="/media/system/js/multiselect.js?069e91f560725fbf665e4fd526c7b3d1" type="text/javascript"></script>
+	<script src="https://lpf.florestal.gov.br/media/com_madeirasbrasileiras/chosen/chosen.jquery.js" type="text/javascript"></script>
+	<script src="https://lpf.florestal.gov.br/media/com_madeirasbrasileiras/js/jquery.cookie.js" type="text/javascript"></script>
+	<script src="/media/jui/js/jquery.searchtools.min.js?069e91f560725fbf665e4fd526c7b3d1" type="text/javascript"></script>
+	<!--[if lt IE 9]><script src="/media/system/js/html5fallback.js?069e91f560725fbf665e4fd526c7b3d1" type="text/javascript"></script><![endif]-->
+	<script src="/media/jui/js/bootstrap.min.js?069e91f560725fbf665e4fd526c7b3d1" type="text/javascript"></script>
+	<script src="/plugins/system/jcemediabox/js/jcemediabox.min.js?1f7b0a303a8f99b234bb0a0914bb82ad" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(document).ready(function() {
+				Joomla.JMultiSelect('adminForm');
+			});
+				(function($){
+					$(document).ready(function() {
+						$('#adminForm').searchtools(
+							{"filtersHidden":true,"defaultLimit":"20","searchFieldSelector":"#filter_search","orderFieldSelector":"#list_fullordering","formSelector":"#adminForm"}
+						);
+					});
+				})(jQuery);
+			jQuery(function($){ initPopovers(); $("body").on("subform-row-add", initPopovers); function initPopovers (event, container) { $(container || document).find(".hasPopover").popover({"html": true,"trigger": "hover focus","container": "body"});} });jQuery(function($){ initTooltips(); $("body").on("subform-row-add", initTooltips); function initTooltips (event, container) { container = container || document;$(container).find(".hasTooltip").tooltip({"html": true,"container": "body"});} });jQuery(document).ready(function(){WfMediabox.init({"base":"\/","theme":"standard","width":"","height":"","lightbox":0,"shadowbox":0,"icons":1,"overlay":1,"overlay_opacity":0,"overlay_color":"","transition_speed":300,"close":2,"scrolling":"0","labels":{"close":"Close","next":"Next","previous":"Previous","cancel":"Cancel","numbers":"{{numbers}}","numbers_count":"{{current}} of {{total}}","download":"Download"}});});
+	</script>
+
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+
+</head>
+<body >
+<div id="barra-brasil" style="background:#7F7F7F; height: 20px; padding:0 0 0 10px;display:block;">
+    <ul id="menu-barra-temp" style="list-style:none;">
+        <li style="display:inline; float:left;padding-right:10px; margin-right:10px; border-right:1px solid #EDEDED">
+            <a href="https://brasil.gov.br" style="font-family:sans,sans-serif; text-decoration:none; color:white;">Portal do Governo Brasileiro</a>
+        </li>
+    </ul>
+</div>
+<a class="hide" id="topo" href="#accessibility" style="display: none">Ir direto para menu de acessibilidade.</a>
+<noscript>
+    <div class="error minor-font">
+        Seu navegador de internet está sem suporte à JavaScript. Por esse motivo algumas funcionalidades do site podem não estar acessíveis.
+    </div>
+</noscript>
+<!--[if lt IE 7]><center><strong>Atenção, a versão de seu navegador não é compatível com este sítio. Atualize seu navegador.</strong></center><![endif]-->
+<!---->
+<div class="layout">
+
+    <header id="header-master" class="container-fluid inner">
+
+        <div id="header-bar" class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div id="logo" class="">
+                        <a href="https://lpf.florestal.gov.br/" title="Laboratório de Produtos Florestais">
+                                                        <span class="portal-title-1">s</span>
+                            <h1 class="portal-title corto">SERVIÇO FLORESTAL BRASILEIRO</h1>
+                            <span class="portal-description">Laboratório de Produtos Florestais</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 header-right">
+                    		<h2 class="hide">Opções de acessibilidade</h2>
+		<ul class="nav menu mod-list" id="portal-siteactions">
+<li class="item-111"><a href="/pt-br/acessibilidade" >Acessibilidade</a></li><li class="item-112"><a href="#" class="toggle-contraste">Alto contraste</a></li><li class="item-113"><a href="/pt-br/mapa-do-site" >Mapa do site</a></li></ul>
+	
+                </div>
+
+                <div id="menu-bar" class="col-md-12">
+                    <div class="bar">
+                        <div class="row">
+                            <div class="col-md-8 col-sm-12">
+                                <nav class="first navbar navbar-expand-sm navbar-light">
+                                    <button class="navbar-brand" type="button" data-toggle="collapse" data-target="#nav-principal" aria-controls="nav-principal" aria-expanded="false" onclick="toogleMenu(this)">
+                                        <div class="bar1"></div>
+                                        <div class="bar2"></div>
+                                        <div class="bar3"></div>
+                                    </button>
+                                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                                        
+                                    </div>
+                                </nav>
+                            </div>
+                            <div class="col-md-4 col-sm-12 search-input">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="nav-principal" class="row collapse navbar-collapse">
+            <div class="container">
+                
+            </div>
+        </div>
+
+    </header>
+
+        <main>
+        <div class="container">
+            	<div class="row-fluid">
+		<section>
+						
+
+<div id="breadcrumb" class="col-md-12 rastro-navegacao row-flutuante">
+    <div class="row">
+        <a href="/pt-br/" class="pathway"><i class="fas fa-home"></i></a> <span class="separator"><i class="fas fa-chevron-right"></i></span> <span><strong>Madeiras Brasileiras</strong></span>    </div>
+</div>
+		</section>
+	</div>
+	
+        </div>
+
+        <div class="container-fluid">
+            
+        </div>
+
+        
+                        <div class="container">
+
+            
+
+                            <div class="row-fluid">
+                    
+<div class="container">
+
+    <form action="https://lpf.florestal.gov.br/pt-br/madeiras-brasileiras?start=0" method="post"
+          name="adminForm" id="adminForm" >
+
+        <h2>Banco de dados de Madeiras Brasileiras</h2>
+        <hr>
+	    <style>
+    .js-stools-container-filters{
+        display: block !important;
+    }
+</style>
+<div class="js-stools clearfix">
+    <div class="clearfix">
+        <div class="js-stools-container-bar">
+            <div class="form-row">
+                <div class="col-auto">
+                    <label for="filter_search" class="element-invisible" aria-invalid="false">Pesquisar</label>
+                </div>
+                <div class="col-auto">
+					<input type="text" name="filter[search]" id="filter_search"  value="" class="js-stools-search-string form-control"              />
+                </div>
+
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-success hasTooltip" title=""
+                            data-original-title="Pesquisar">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+
+	                                <div class="btn-wrapper hidden-phone">
+                        <button type="button" class="btn btn-info" id="btn-busca-avancada">
+				            Busca Avançada <i class="caret"></i>
+                        </button>
+                    </div>
+	            
+                <div class="col-auto">
+                    <div class="btn-wrapper">
+                        <button type="button" class="btn btn-secondary hasTooltip js-stools-btn-clear" title=""
+                                data-original-title="Limpar Filtro"
+                                onclick="jQuery(this).closest('form').find('input').val('');">
+							Limpar Filtro                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="js-stools-container-list hidden-phone hidden-tablet">
+			        </div>
+    </div>
+    <hr>
+    <!-- Filters div -->
+    <div class="js-stools-container-filters hidden-phone clearfix" style="">
+        <div class="row">
+            <p><strong>Pesquisa padrão (Seca)</strong></p>
+            <div class="col-md-12">
+                                                    <div class='row'>                                                <div class="col-md-4">
+                            <div class="js-stools-field-filter">
+                                <span data-toggle="tooltip" data-placement="top" class="tooltip-filtro" title="Densidade Básica"><i class="fas fa-question-circle"></i></span>
+                                <div class="control-group">
+			<div class="control-label"><label id="filter_densidadebasica-lbl" for="filter_densidadebasica" class="hasPopover" title="Densidade" data-content="Densidade Básica">
+	Densidade</label>
+</div>
+		<div class="controls"><select id="filter_densidadebasica" name="filter[densidadebasica]" onchange="this.form.submit();">
+	<option value="" selected="selected">Selecione</option>
+	<option value="1">Leve - Abaixo de 0,50 g/cm&sup3;</option>
+	<option value="2">M&eacute;dia - 0,50 at&eacute; 0,72 g/cm&sup3;</option>
+	<option value="3">Pesada - Acima de 0,72 g/cm&sup3;</option>
+</select>
+</div>
+</div>
+                            </div>
+                        </div>
+                                                                                            <div class="col-md-4">
+                            <div class="js-stools-field-filter">
+                                <span data-toggle="tooltip" data-placement="top" class="tooltip-filtro" title="Dureza Paralela às Fibras"><i class="fas fa-question-circle"></i></span>
+                                <div class="control-group">
+			<div class="control-label"><label id="filter_durezaparalelaseca-lbl" for="filter_durezaparalelaseca" class="hasTooltip" title="&lt;strong&gt;Dureza Paralela às Fibras&lt;/strong&gt;">
+	Dureza Paralela às Fibras</label>
+</div>
+		<div class="controls"><select id="filter_durezaparalelaseca" name="filter[durezaparalelaseca]" onchange="this.form.submit();">
+	<option value="" selected="selected">Selecione</option>
+	<option value="1">Baixa - Abaixo de 364 kgf</option>
+	<option value="2">M&eacute;dia - 364 at&eacute; 802 kgf</option>
+	<option value="3">Alta - Acima de 802 kgf</option>
+</select>
+</div>
+</div>
+                            </div>
+                        </div>
+                                                                                            <div class="col-md-4">
+                            <div class="js-stools-field-filter">
+                                <span data-toggle="tooltip" data-placement="top" class="tooltip-filtro" title="Dureza Transversal às Fibras"><i class="fas fa-question-circle"></i></span>
+                                <div class="control-group">
+			<div class="control-label"><label id="filter_durezatransversalseca-lbl" for="filter_durezatransversalseca" class="hasTooltip" title="&lt;strong&gt;Dureza Transversal às Fibras&lt;/strong&gt;">
+	Dureza Transversal às Fibras</label>
+</div>
+		<div class="controls"><select id="filter_durezatransversalseca" name="filter[durezatransversalseca]" onchange="this.form.submit();">
+	<option value="" selected="selected">Selecione</option>
+	<option value="1">Baixa - Abaixo de 364 kgf</option>
+	<option value="2">M&eacute;dia - 364 at&eacute; 802 kgf</option>
+	<option value="3">Alta - Acima de 802 kgf</option>
+</select>
+</div>
+</div>
+                            </div>
+                        </div>
+                                            </div><div class='row'>                                                <div class="col-md-4">
+                            <div class="js-stools-field-filter">
+                                <span data-toggle="tooltip" data-placement="top" class="tooltip-filtro" title="Compressão Paralela às Fibras"><i class="fas fa-question-circle"></i></span>
+                                <div class="control-group">
+			<div class="control-label"><label id="filter_compressaorupturaseca-lbl" for="filter_compressaorupturaseca" class="hasTooltip" title="&lt;strong&gt;Compressão Paralela às Fibras&lt;/strong&gt;">
+	Compressão Paralela às Fibras</label>
+</div>
+		<div class="controls"><select id="filter_compressaorupturaseca" name="filter[compressaorupturaseca]" onchange="this.form.submit();">
+	<option value="" selected="selected">Selecione</option>
+	<option value="1">Baixa - Abaixo de 298 kgf/cm&sup2;</option>
+	<option value="2">M&eacute;dia - 298 at&eacute; 492 kgf/cm&sup2;</option>
+	<option value="3">Alta - Acima de 492 kgf/cm&sup2;</option>
+</select>
+</div>
+</div>
+                            </div>
+                        </div>
+                                                                                            <div class="col-md-4">
+                            <div class="js-stools-field-filter">
+                                <span data-toggle="tooltip" data-placement="top" class="tooltip-filtro" title="Compressão Perpendicular às Fibras"><i class="fas fa-question-circle"></i></span>
+                                <div class="control-group">
+			<div class="control-label"><label id="filter_compressaoproporcionalseca-lbl" for="filter_compressaoproporcionalseca" class="hasTooltip" title="&lt;strong&gt;Compressão Perpendicular às Fibras&lt;/strong&gt;">
+	Compressão Perpendicular às Fibras</label>
+</div>
+		<div class="controls"><select id="filter_compressaoproporcionalseca" name="filter[compressaoproporcionalseca]" onchange="this.form.submit();">
+	<option value="" selected="selected">Selecione</option>
+	<option value="1">Baixa - Abaixo de 298 kgf/cm&sup2;</option>
+	<option value="2">M&eacute;dia - 298 at&eacute; 492 kgf/cm&sup2;</option>
+	<option value="3">Alta - Acima de 492 kgf/cm&sup2;</option>
+</select>
+</div>
+</div>
+                            </div>
+                        </div>
+                                                                                            <div class="col-md-4">
+                            <div class="js-stools-field-filter">
+                                <span data-toggle="tooltip" data-placement="top" class="tooltip-filtro" title="Módulo de Elasticidade"><i class="fas fa-question-circle"></i></span>
+                                <div class="control-group">
+			<div class="control-label"><label id="filter_flexaoelasticidadeseca-lbl" for="filter_flexaoelasticidadeseca" class="hasTooltip" title="&lt;strong&gt;Módulo de Elasticidade&lt;/strong&gt;">
+	Módulo de Elasticidade</label>
+</div>
+		<div class="controls"><select id="filter_flexaoelasticidadeseca" name="filter[flexaoelasticidadeseca]" onchange="this.form.submit();">
+	<option value="" selected="selected">Selecione</option>
+	<option value="1">Baixo - Abaixo de 96 kgf/cm&sup2; X 1000</option>
+	<option value="2">M&eacute;dio - 96 at&eacute; 131 kgf/cm&sup2; X 1000</option>
+	<option value="3">Alto - Acima de 131 kgf/cm&sup2; X 1000</option>
+</select>
+</div>
+</div>
+                            </div>
+                        </div>
+                                            </div><div class='row'>                                                <div class="col-md-4">
+                            <div class="js-stools-field-filter">
+                                <span data-toggle="tooltip" data-placement="top" class="tooltip-filtro" title="Contração Volumétrica"><i class="fas fa-question-circle"></i></span>
+                                <div class="control-group">
+			<div class="control-label"><label id="filter_contracaovolumetrica-lbl" for="filter_contracaovolumetrica" class="hasTooltip" title="&lt;strong&gt;Contração Volumétrica&lt;/strong&gt;">
+	Contração Volumétrica</label>
+</div>
+		<div class="controls"><select id="filter_contracaovolumetrica" name="filter[contracaovolumetrica]" onchange="this.form.submit();">
+	<option value="" selected="selected">Selecione</option>
+	<option value="1">Baixa - Abaixo de 11,5%</option>
+	<option value="2">M&eacute;dia - 11,5 at&eacute; 14%</option>
+	<option value="3">Alta - Acima de 14%</option>
+</select>
+</div>
+</div>
+                            </div>
+                        </div>
+                                                                                            <div class="col-md-4">
+                            <div class="js-stools-field-filter">
+                                <span data-toggle="tooltip" data-placement="top" class="tooltip-filtro" title="Contração Radial"><i class="fas fa-question-circle"></i></span>
+                                <div class="control-group">
+			<div class="control-label"><label id="filter_contracaoradial-lbl" for="filter_contracaoradial" class="hasTooltip" title="&lt;strong&gt;Contração Radial&lt;/strong&gt;">
+	Contração Radial</label>
+</div>
+		<div class="controls"><select id="filter_contracaoradial" name="filter[contracaoradial]" onchange="this.form.submit();">
+	<option value="" selected="selected">Selecione</option>
+	<option value="1">Baixa - Abaixo de 11,5%</option>
+	<option value="2">M&eacute;dia - 11,5 at&eacute; 14%</option>
+	<option value="3">Alta - Acima de 14%</option>
+</select>
+</div>
+</div>
+                            </div>
+                        </div>
+                                                                                            <div class="col-md-4">
+                            <div class="js-stools-field-filter">
+                                <span data-toggle="tooltip" data-placement="top" class="tooltip-filtro" title="Cisalhamento"><i class="fas fa-question-circle"></i></span>
+                                <div class="control-group">
+			<div class="control-label"><label id="filter_cisalhamentorupturaseca-lbl" for="filter_cisalhamentorupturaseca" class="hasTooltip" title="&lt;strong&gt;Cisalhamento&lt;/strong&gt;">
+	Cisalhamento</label>
+</div>
+		<div class="controls"><select id="filter_cisalhamentorupturaseca" name="filter[cisalhamentorupturaseca]" onchange="this.form.submit();">
+	<option value="" selected="selected">Selecione</option>
+	<option value="1">Baixo - Abaixo de 78 kgf/cm&sup2;</option>
+	<option value="2">M&eacute;dio - 78 at&eacute; 117 kgf/cm&sup2;</option>
+	<option value="3">Alto - Acima de 117 kgf/cm&sup2;</option>
+</select>
+</div>
+</div>
+                            </div>
+                        </div>
+                                            </div><div class='row'>                                                <div class="col-md-4">
+                            <div class="js-stools-field-filter">
+                                <span data-toggle="tooltip" data-placement="top" class="tooltip-filtro" title="Cor do Cerne"><i class="fas fa-question-circle"></i></span>
+                                <div class="control-group">
+			<div class="control-label"><label id="filter_corid-lbl" for="filter_corid" class="hasTooltip" title="&lt;strong&gt;Cor do Cerne&lt;/strong&gt;">
+	Cor do Cerne</label>
+</div>
+		<div class="controls"><select id="filter_corid" name="filter[corid]" class="inputbox chosen" onchange="this.form.submit();">
+	<option value="" selected="selected">Selecione</option>
+	<option value="1">Branca - White</option>
+	<option value="2">Rosa - Pink</option>
+	<option value="3">Amarela - Yellow</option>
+	<option value="4">Vermelha - Red</option>
+	<option value="5">Oliva - Olive</option>
+	<option value="6">Castanha - Light Brown</option>
+	<option value="7">Marrom - Brown</option>
+	<option value="8">Roxa - Purple</option>
+	<option value="9">Cinza - Gray</option>
+	<option value="10">Preta - Black</option>
+</select>
+</div>
+</div>
+                            </div>
+                        </div>
+                                                                                            <div class="col-md-4">
+                            <div class="js-stools-field-filter">
+                                <span data-toggle="tooltip" data-placement="top" class="tooltip-filtro" title="Classificação do tempo de secagem (dias)"><i class="fas fa-question-circle"></i></span>
+                                <div class="control-group">
+			<div class="control-label"><label id="filter_temposecagem-lbl" for="filter_temposecagem" class="hasTooltip" title="&lt;strong&gt;Classificação do tempo de secagem (dias)&lt;/strong&gt;">
+	Classificação do tempo de secagem (dias)</label>
+</div>
+		<div class="controls"><select id="filter_temposecagem" name="filter[temposecagem]" onchange="this.form.submit();">
+	<option value="" selected="selected">Selecione</option>
+	<option value="1">Muito r&aacute;pida &lt; 4</option>
+	<option value="2">R&aacute;pida - De 4 a 8</option>
+	<option value="3">Moderadamente R&aacute;pida - De 8,1 a 12</option>
+	<option value="4">Moderadamente Lenta - De 12,1 a 16</option>
+	<option value="5">Lenta - De 16,1 a 20</option>
+	<option value="6">Muito Lenta &gt; 20</option>
+</select>
+</div>
+</div>
+                            </div>
+                        </div>
+                                                                                            </div><div class='row'>                                                                                                                                                </div><div class='row'>                                                                                                                                                </div>                            </div>
+        </div>
+    </div>
+        <div class="row">
+            <div class="pesquisaAvancada" id="container-buscavancada" style="display: none;">
+                <hr>
+                <div class="col-md-12">
+                    <p><strong>Busca avançada (Verde)</strong></p>
+			        			        				        <div class='row'>					        					        					        					        					        					        </div><div class='row'>					        					        					        					        					        					        </div><div class='row'>					        					        					        					        					        					        </div><div class='row'>					        					        					        					        					                                    <div class="col-md-4">
+                                <div class="js-stools-field-filter">
+                                    <span data-toggle="tooltip" data-placement="top" class="tooltip-filtro" title="Dureza Paralela às Fibras"><i class="fas fa-question-circle"></i></span>
+							        <div class="control-group">
+			<div class="control-label"><label id="filter_durezaparalelaverde-lbl" for="filter_durezaparalelaverde" class="hasTooltip" title="&lt;strong&gt;Dureza Paralela às Fibras&lt;/strong&gt;">
+	Dureza Paralela às Fibras</label>
+</div>
+		<div class="controls"><select id="filter_durezaparalelaverde" name="filter[durezaparalelaverde]" onchange="this.form.submit();">
+	<option value="" selected="selected">Selecione</option>
+	<option value="1">Baixa - Abaixo de 364 kgf</option>
+	<option value="2">M&eacute;dia - 364 at&eacute; 802 kgf</option>
+	<option value="3">Alta - Acima de 802 kgf</option>
+</select>
+</div>
+</div>
+                                </div>
+                            </div>
+				        					        </div><div class='row'>					                                    <div class="col-md-4">
+                                <div class="js-stools-field-filter">
+                                    <span data-toggle="tooltip" data-placement="top" class="tooltip-filtro" title="Dureza Transversal às Fibras"><i class="fas fa-question-circle"></i></span>
+							        <div class="control-group">
+			<div class="control-label"><label id="filter_durezatransversalverde-lbl" for="filter_durezatransversalverde" class="hasTooltip" title="&lt;strong&gt;Dureza Transversal às Fibras&lt;/strong&gt;">
+	Dureza Transversal às Fibras</label>
+</div>
+		<div class="controls"><select id="filter_durezatransversalverde" name="filter[durezatransversalverde]" onchange="this.form.submit();">
+	<option value="" selected="selected">Selecione</option>
+	<option value="1">Baixa - Abaixo de 364 kgf</option>
+	<option value="2">M&eacute;dia - 364 at&eacute; 802 kgf</option>
+	<option value="3">Alta - Acima de 802 kgf</option>
+</select>
+</div>
+</div>
+                                </div>
+                            </div>
+				        					        					                                    <div class="col-md-4">
+                                <div class="js-stools-field-filter">
+                                    <span data-toggle="tooltip" data-placement="top" class="tooltip-filtro" title="Compressão Paralela às Fibras²"><i class="fas fa-question-circle"></i></span>
+							        <div class="control-group">
+			<div class="control-label"><label id="filter_compressaorupturaverde-lbl" for="filter_compressaorupturaverde" class="hasPopover" title="Compressão Paralela às Fibras" data-content="Compressão Paralela às Fibras²">
+	Compressão Paralela às Fibras</label>
+</div>
+		<div class="controls"><select id="filter_compressaorupturaverde" name="filter[compressaorupturaverde]" onchange="this.form.submit();">
+	<option value="" selected="selected">Selecione</option>
+	<option value="1">Baixa - Abaixo de 298 kgf/cm&sup2;</option>
+	<option value="2">M&eacute;dia - 298 at&eacute; 492 kgf/cm&sup2;</option>
+	<option value="3">Alta - Acima de 492 kgf/cm&sup2;</option>
+</select>
+</div>
+</div>
+                                </div>
+                            </div>
+				        					        					                                    <div class="col-md-4">
+                                <div class="js-stools-field-filter">
+                                    <span data-toggle="tooltip" data-placement="top" class="tooltip-filtro" title="Compressão Perpendicular às Fibras"><i class="fas fa-question-circle"></i></span>
+							        <div class="control-group">
+			<div class="control-label"><label id="filter_compressaoproporcionalverde-lbl" for="filter_compressaoproporcionalverde" class="hasTooltip" title="&lt;strong&gt;Compressão Perpendicular às Fibras&lt;/strong&gt;">
+	Compressão Perpendicular às Fibras</label>
+</div>
+		<div class="controls"><select id="filter_compressaoproporcionalverde" name="filter[compressaoproporcionalverde]" class="form-control" onchange="this.form.submit();">
+	<option value="" selected="selected">Selecione</option>
+	<option value="1">Baixa - Abaixo de 298 kgf/cm&sup2;</option>
+	<option value="2">M&eacute;dia - 298 at&eacute; 492 kgf/cm&sup2;</option>
+	<option value="3">Alta - Acima de 492 kgf/cm&sup2;</option>
+</select>
+</div>
+</div>
+                                </div>
+                            </div>
+				        					        </div><div class='row'>					                                    <div class="col-md-4">
+                                <div class="js-stools-field-filter">
+                                    <span data-toggle="tooltip" data-placement="top" class="tooltip-filtro" title="Módulo de Elasticidade"><i class="fas fa-question-circle"></i></span>
+							        <div class="control-group">
+			<div class="control-label"><label id="filter_flexaoelasticidadeverde-lbl" for="filter_flexaoelasticidadeverde" class="hasTooltip" title="&lt;strong&gt;Módulo de Elasticidade&lt;/strong&gt;">
+	Módulo de Elasticidade</label>
+</div>
+		<div class="controls"><select id="filter_flexaoelasticidadeverde" name="filter[flexaoelasticidadeverde]" onchange="this.form.submit();">
+	<option value="" selected="selected">Selecione</option>
+	<option value="1">Baixo - Abaixo de 96 kgf/cm&sup2; X 1000</option>
+	<option value="2">M&eacute;dio - 96 at&eacute; 131 kgf/cm&sup2; X 1000</option>
+	<option value="3">Alto - Acima de 131 kgf/cm&sup2; X 1000</option>
+</select>
+</div>
+</div>
+                                </div>
+                            </div>
+				        					        					                                    <div class="col-md-4">
+                                <div class="js-stools-field-filter">
+                                    <span data-toggle="tooltip" data-placement="top" class="tooltip-filtro" title="Cisalhamento"><i class="fas fa-question-circle"></i></span>
+							        <div class="control-group">
+			<div class="control-label"><label id="filter_cisalhamentorupturaverde-lbl" for="filter_cisalhamentorupturaverde" class="hasTooltip" title="&lt;strong&gt;Cisalhamento&lt;/strong&gt;">
+	Cisalhamento</label>
+</div>
+		<div class="controls"><select id="filter_cisalhamentorupturaverde" name="filter[cisalhamentorupturaverde]" onchange="this.form.submit();">
+	<option value="" selected="selected">Selecione</option>
+	<option value="1">Baixo - Abaixo de 78 kgf/cm&sup2;</option>
+	<option value="2">M&eacute;dio - 78 at&eacute; 117 kgf/cm&sup2;</option>
+	<option value="3">Alto - Acima de 117 kgf/cm&sup2;</option>
+</select>
+</div>
+</div>
+                                </div>
+                            </div>
+				        					        					                                    <div class="col-md-4">
+                                <div class="js-stools-field-filter">
+                                    <span data-toggle="tooltip" data-placement="top" class="tooltip-filtro" title="Cites"><i class="fas fa-question-circle"></i></span>
+							        <div class="control-group">
+			<div class="control-label"><label id="filter_cities-lbl" for="filter_cities" class="hasTooltip" title="&lt;strong&gt;Cites&lt;/strong&gt;">
+	Cites</label>
+</div>
+		<div class="controls"><select id="filter_cities" name="filter[cities]" onchange="this.form.submit();">
+	<option value="" selected="selected">Selecione</option>
+	<option value="1">Sim</option>
+	<option value="0">N&atilde;o</option>
+</select>
+</div>
+</div>
+                                </div>
+                            </div>
+				        					        </div>			                        </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <br>
+                <p><strong>Total de espécies encontradas:</strong> 271</p>
+                <div class="table">
+        <table class="table table-striped" id="caracteristicaList">
+            <thead>
+            <tr>
+                
+                    <th class='left'>
+                        Nome científico                    </th>
+                    <th class='left'>
+                        Nome comercial                    </th>
+                    <th class='left'>
+                        Origem                    </th>
+
+            </tr>
+            </thead>
+            <tfoot>
+            <tr>
+                <td colspan="4">
+                    <div class="pagination">
+<nav role="navigation" aria-label="Paginação"><ul class="pagination justify-content-center"><li class="disabled page-item"><a class="page-link"><i class="fas fa-fast-backward fa-xs"></i></a></li><li class="disabled page-item"><a class="page-link"><i class="fas fa-backward fa-xs"></i></a></li><li class="active page-item"><a class="page-link" href="#" aria-current="true" aria-label="Página 1">1</a></li><li class="hideonxs page-item"><a title="2" href="/pt-br/madeiras-brasileiras?start=20" class="pagenav page-link" aria-label="Ir para página 2">2</a></li><li class="hideonxs page-item"><a title="3" href="/pt-br/madeiras-brasileiras?start=40" class="pagenav page-link" aria-label="Ir para página 3">3</a></li><li class="hideonxs page-item"><a title="4" href="/pt-br/madeiras-brasileiras?start=60" class="pagenav page-link" aria-label="Ir para página 4">4</a></li><li class="hideonxs page-item"><a title="5" href="/pt-br/madeiras-brasileiras?start=80" class="pagenav page-link" aria-label="Ir para página 5">...</a></li><li class="hideonxs page-item"><a title="6" href="/pt-br/madeiras-brasileiras?start=100" class="pagenav page-link" aria-label="Ir para página 6">6</a></li><li class="hideonxs page-item"><a title="7" href="/pt-br/madeiras-brasileiras?start=120" class="pagenav page-link" aria-label="Ir para página 7">7</a></li><li class="hideonxs page-item"><a title="8" href="/pt-br/madeiras-brasileiras?start=140" class="pagenav page-link" aria-label="Ir para página 8">8</a></li><li class="hideonxs page-item"><a title="9" href="/pt-br/madeiras-brasileiras?start=160" class="pagenav page-link" aria-label="Ir para página 9">9</a></li><li class="hideonxs page-item"><a title="10" href="/pt-br/madeiras-brasileiras?start=180" class="pagenav page-link" aria-label="Ir para página 10">10</a></li><li class="page-item"><a title="Próximo" href="/pt-br/madeiras-brasileiras?start=20" class="pagenav page-link" aria-label="Ir para a página próximo"><i class="fas fa-forward fa-xs"></i></a></li><li class="page-item"><a title="Fim" href="/pt-br/madeiras-brasileiras?start=260" class="pagenav page-link" aria-label="Ir para a página fim"><i class="fas fa-fast-forward fa-xs"></i></a></li></ul></nav>
+<input type="hidden" name="limitstart" value="0" />
+</div>                </td>
+            </tr>
+            </tfoot>
+            <tbody>
+            
+                    <tr class="row0">
+                        <td>
+                            <a href="https://lpf.florestal.gov.br/index.php?option=com_madeirasbrasileiras&view=especieestudada&especieestudadaid=2">Acioa edulis</a>
+                        </td>
+                        <td>
+
+                            CASTANHA-DE-CUTIA                        </td>
+                        <td>
+
+                            Juruá-Solimões-AM                        </td>
+
+                    </tr>
+                
+                    <tr class="row1">
+                        <td>
+                            <a href="https://lpf.florestal.gov.br/index.php?option=com_madeirasbrasileiras&view=especieestudada&especieestudadaid=3">Acioa sp.</a>
+                        </td>
+                        <td>
+
+                            ANOERÁ-FERRO                        </td>
+                        <td>
+
+                            Juruá-Solimões-AM                        </td>
+
+                    </tr>
+                
+                    <tr class="row0">
+                        <td>
+                            <a href="https://lpf.florestal.gov.br/index.php?option=com_madeirasbrasileiras&view=especieestudada&especieestudadaid=148">Albizia pedicellaris = Macrosamanea pedicellaris</a>
+                        </td>
+                        <td>
+
+                            INGA-DE-PORCO                        </td>
+                        <td>
+
+                            Tucumã-PA                        </td>
+
+                    </tr>
+                
+                    <tr class="row1">
+                        <td>
+                            <a href="https://lpf.florestal.gov.br/index.php?option=com_madeirasbrasileiras&view=especieestudada&especieestudadaid=284">Alexa grandiflora</a>
+                        </td>
+                        <td>
+
+                            Melancieira                        </td>
+                        <td>
+
+                            Santarém-PA                        </td>
+
+                    </tr>
+                
+                    <tr class="row0">
+                        <td>
+                            <a href="https://lpf.florestal.gov.br/index.php?option=com_madeirasbrasileiras&view=especieestudada&especieestudadaid=5">Allantoma lineata</a>
+                        </td>
+                        <td>
+
+                            Seru                        </td>
+                        <td>
+
+                            Flona de Caxiuanã-PA                        </td>
+
+                    </tr>
+                
+                    <tr class="row1">
+                        <td>
+                            <a href="https://lpf.florestal.gov.br/index.php?option=com_madeirasbrasileiras&view=especieestudada&especieestudadaid=6">Amburana acreana</a>
+                        </td>
+                        <td>
+
+                            Cerejeira                        </td>
+                        <td>
+
+                            Floresta Nacional do Jamari-RO                        </td>
+
+                    </tr>
+                
+                    <tr class="row0">
+                        <td>
+                            <a href="https://lpf.florestal.gov.br/index.php?option=com_madeirasbrasileiras&view=especieestudada&especieestudadaid=7">Anacardium giganteum</a>
+                        </td>
+                        <td>
+
+                            CAJUAÇU                        </td>
+                        <td>
+
+                            Floresta Nacional do Jamari-RO                        </td>
+
+                    </tr>
+                
+                    <tr class="row1">
+                        <td>
+                            <a href="https://lpf.florestal.gov.br/index.php?option=com_madeirasbrasileiras&view=especieestudada&especieestudadaid=8">Anacardium occidentale = Anacardium microcarpum</a>
+                        </td>
+                        <td>
+
+                            CAJUAÇU                        </td>
+                        <td>
+
+                            Juruá-Solimões-AM                        </td>
+
+                    </tr>
+                
+                    <tr class="row0">
+                        <td>
+                            <a href="https://lpf.florestal.gov.br/index.php?option=com_madeirasbrasileiras&view=especieestudada&especieestudadaid=9">Anacardium parvifolium</a>
+                        </td>
+                        <td>
+
+                            CAJUAÇU                        </td>
+                        <td>
+
+                            Juruá-Solimões-AM                        </td>
+
+                    </tr>
+                
+                    <tr class="row1">
+                        <td>
+                            <a href="https://lpf.florestal.gov.br/index.php?option=com_madeirasbrasileiras&view=especieestudada&especieestudadaid=12">Anacardium parvifolium = Anacardium tenuifolium</a>
+                        </td>
+                        <td>
+
+                            CAJUÍ                        </td>
+                        <td>
+
+                            Juruá-Solimões-AM                        </td>
+
+                    </tr>
+                
+                    <tr class="row0">
+                        <td>
+                            <a href="https://lpf.florestal.gov.br/index.php?option=com_madeirasbrasileiras&view=especieestudada&especieestudadaid=11">Anacardium spruceanum</a>
+                        </td>
+                        <td>
+
+                            CAJUAÇU                        </td>
+                        <td>
+
+                            Santarém-PA                        </td>
+
+                    </tr>
+                
+                    <tr class="row1">
+                        <td>
+                            <a href="https://lpf.florestal.gov.br/index.php?option=com_madeirasbrasileiras&view=especieestudada&especieestudadaid=25">Anaueria brasiliensis = Beilschmiedia brasiliensis</a>
+                        </td>
+                        <td>
+
+                            LOURO                        </td>
+                        <td>
+
+                            Juruá-Solimões-AM                        </td>
+
+                    </tr>
+                
+                    <tr class="row0">
+                        <td>
+                            <a href="https://lpf.florestal.gov.br/index.php?option=com_madeirasbrasileiras&view=especieestudada&especieestudadaid=14">Andira sp.</a>
+                        </td>
+                        <td>
+
+                            ANGELIM-TINTO                        </td>
+                        <td>
+
+                            Juruá-Solimões-AM                        </td>
+
+                    </tr>
+                
+                    <tr class="row1">
+                        <td>
+                            <a href="https://lpf.florestal.gov.br/index.php?option=com_madeirasbrasileiras&view=especieestudada&especieestudadaid=13">Andira surinamensis = Andira retusa</a>
+                        </td>
+                        <td>
+
+                            ANDIRA-UXI                        </td>
+                        <td>
+
+                            Juruá-Solimões-AM                        </td>
+
+                    </tr>
+                
+                    <tr class="row0">
+                        <td>
+                            <a href="https://lpf.florestal.gov.br/index.php?option=com_madeirasbrasileiras&view=especieestudada&especieestudadaid=15">Aniba canelilla</a>
+                        </td>
+                        <td>
+
+                            CASCA-PRECIOSA                        </td>
+                        <td>
+
+                            Curuá-Una-PA                        </td>
+
+                    </tr>
+                
+                    <tr class="row1">
+                        <td>
+                            <a href="https://lpf.florestal.gov.br/index.php?option=com_madeirasbrasileiras&view=especieestudada&especieestudadaid=219">Annona exsucca = Rollinia exsucca</a>
+                        </td>
+                        <td>
+
+                            EMBIRA                        </td>
+                        <td>
+
+                            Curuá-Una-PA                        </td>
+
+                    </tr>
+                
+                    <tr class="row0">
+                        <td>
+                            <a href="https://lpf.florestal.gov.br/index.php?option=com_madeirasbrasileiras&view=especieestudada&especieestudadaid=16">Apeiba echinata</a>
+                        </td>
+                        <td>
+
+                            PAU-DE-JANGADA                        </td>
+                        <td>
+
+                            Santarém-PA                        </td>
+
+                    </tr>
+                
+                    <tr class="row1">
+                        <td>
+                            <a href="https://lpf.florestal.gov.br/index.php?option=com_madeirasbrasileiras&view=especieestudada&especieestudadaid=17">Apuleia leiocarpa = Apuleia molaris</a>
+                        </td>
+                        <td>
+
+                            GARAPA                        </td>
+                        <td>
+
+                            Tucumã-PA                        </td>
+
+                    </tr>
+                
+                    <tr class="row0">
+                        <td>
+                            <a href="https://lpf.florestal.gov.br/index.php?option=com_madeirasbrasileiras&view=especieestudada&especieestudadaid=18">Aspidosperma desmanthum</a>
+                        </td>
+                        <td>
+
+                            ARARACANGA                        </td>
+                        <td>
+
+                            Flona de Caxiuanã-PA                        </td>
+
+                    </tr>
+                
+                    <tr class="row1">
+                        <td>
+                            <a href="https://lpf.florestal.gov.br/index.php?option=com_madeirasbrasileiras&view=especieestudada&especieestudadaid=19">Aspidosperma macrocarpon</a>
+                        </td>
+                        <td>
+
+                            PEROBA                        </td>
+                        <td>
+
+                            Floresta Nacional do Jamari-RO                        </td>
+
+                    </tr>
+                                            </tbody>
+        </table>
+            </div>
+
+        <input type="hidden" name="task" value=""/>
+        <input type="hidden" name="boxchecked" value="0"/>
+        <input type="hidden" name="filter_order" value=""/>
+        <input type="hidden" name="filter_order_Dir" value=""/>
+        <input type="hidden" name="ef9c7eebdc850f861859027eb47a6adb" value="1" />    </form>
+</div>
+
+<script>
+
+    jQuery(document).ready(function(){
+        var flgBusca = localStorage.getItem('searchAdv');
+        if(!flgBusca){
+            localStorage.setItem('searchAdv', '0');
+        }
+        jQuery('select').chosen();
+        const ids = [];
+        jQuery('select[id]').each(function () {
+            ids.push(this.id);
+        });
+        jQuery(ids).each(function() {
+            if(this != "list_limit"){
+                alterColorSelected(this);
+            }
+        });
+
+
+        function alterColorSelected(id){
+            const opcoes = jQuery("#"+id+ " option:selected").val();
+            const idChosen = "#" + id + "_chosen";
+
+            jQuery(idChosen).removeClass( "filterSelectedMadeiras" );
+
+            if(opcoes){
+                jQuery(idChosen).addClass( "filterSelectedMadeiras" );
+            }
+        }
+        jQuery( "#btn-busca-avancada" ).click(function() {
+            if(flgBusca == 0){
+                jQuery("#container-buscavancada").toggle();
+                localStorage.setItem('searchAdv', '1');
+            }else{
+                jQuery("#container-buscavancada").toggle();
+                localStorage.setItem('searchAdv', '0');
+            }
+        });
+
+        jQuery( ".js-stools-btn-clear" ).click(function() {
+            jQuery("#container-buscavancada").hide();
+            localStorage.setItem('searchAdv', '0');
+        });
+
+        if(flgBusca == 0){
+            jQuery("#container-buscavancada").hide();
+        }else{
+            jQuery("#container-buscavancada").show();
+        }
+
+    });
+    window.toggleField = function (id, task, field) {
+
+        var f = document.adminForm, i = 0, cbx, cb = f[ id ];
+
+        if (!cb) return false;
+
+        while (true) {
+            cbx = f[ 'cb' + i ];
+
+            if (!cbx) break;
+
+            cbx.checked = false;
+            i++;
+        }
+
+        var inputField   = document.createElement('input');
+
+        inputField.type  = 'hidden';
+        inputField.name  = 'field';
+        inputField.value = field;
+        f.appendChild(inputField);
+
+        cb.checked = true;
+        f.boxchecked.value = 1;
+        window.submitform(task);
+
+        return false;
+    };
+</script>
+                </div>
+            
+            
+
+        </div>
+
+        
+
+    </main>
+
+<footer>
+    <div class="container ">
+        
+    </div>
+    <div class="container footer-menu">
+        
+        <nav class="  ">
+                            <h2>Endereço</h2>
+                        
+
+<div class="custom"  >
+	<p>Coordenação-Geral do Laboratório de Produtos Florestais</p>
+<p>SCEN, Trecho 2, Bloco B</p>
+<p>Brasília/ DF - CEP: 70818-900</p>
+<p>Telefone: (61) 2028-2541</p>
+<p>Email: lpf@florestal.gov.br</p>
+<p align="center">&nbsp;</p></div>
+        </nav>
+
+	
+    </div>
+
+    <div class="footer-logos">
+        <div class="container">
+          <!-- <div id="footer-brasil"></div>
+        </div> -->
+    </div>
+    <div class="footer-ferramenta">
+        <div class="container">
+                    </div>
+    </div>
+
+</footer>
+
+<!-- debug -->
+
+<script defer="defer" src="//barra.brasil.gov.br/barra_2.0.js" type="text/javascript"></script>
+<script type="text/javascript" charset="utf-8" language="javascript" src="/templates/padraogoverno02/bootstrap/js/bootstrap-table.js"></script>
+<script type="text/javascript" charset="utf-8" language="javascript" src="/templates/padraogoverno02/bootstrap/js/bootstrap-table-pt-BR.js"></script>
+  <script src="/templates/padraogoverno02/js/template.js" type="text/javascript"></script><noscript>&nbsp;<!-- item para fins de acessibilidade --></noscript>
+</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+[project]
+name = "xiloscan"
+version = "1.0.0"
+description = "Identificação e comparação de amostras macroscópicas de madeira (LPF/SFB + EFV Brasil)"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["scraper/tests", "backend/tests", "tests"]
+addopts = "-q"
+filterwarnings = ["ignore::DeprecationWarning"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+exclude = [".venv", "venv", "notebooks", "frontend"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "C4"]
+# B008: Depends(...)/File(...) em default de parametro e o idioma do FastAPI.
+# E501: comprimento de linha fica a cargo do formatter.
+# E702: o codigo usa ponto e virgula de proposito em inicializacoes curtas
+#       ("a = 0; b = 0") e em acumuladores dentro de laco.
+ignore = ["B008", "E501", "E702"]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]
