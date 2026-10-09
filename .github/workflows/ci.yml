@@ -34,7 +34,21 @@ jobs:
         # A suíte roda sem dataset e sem checkpoint: o que depende de peso
         # treinado é pulado, o resto (parser, índice, scoring, contrato da API)
         # roda com fixtures.
-        run: pytest -q
+        run: |
+          set -o pipefail
+          pytest -q 2>&1 | tee pytest.log
+
+      - name: Anotar a falha
+        # Os logs do Actions exigem autenticação até em repositório público; a
+        # anotação não. Sem isto, uma falha aqui é um "exit code 1" sem contexto.
+        if: failure()
+        run: |
+          python - <<'PY'
+          import pathlib
+          log = pathlib.Path("pytest.log")
+          texto = log.read_text(errors="replace")[-6000:] if log.exists() else "pytest nao produziu saida"
+          print("::error title=pytest::" + texto.replace("\n", "%0A"))
+          PY
 
   frontend:
     name: Build do frontend
