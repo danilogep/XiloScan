@@ -208,3 +208,7 @@ User-Agent (defina `XILOSCAN_SCRAPER_CONTATO` com um e-mail de contato antes de 
 
 O **código** deste repositório está sob [MIT](LICENSE). Os **dados** seguem a licença
 da fonte original e não são redistribuídos aqui.
+
+---
+
+<sub>Parte do meu portfólio — mais projetos em **[github.com/danilogep](https://github.com/danilogep)** · [LinkedIn](https://linkedin.com/in/danilogep)</sub>
