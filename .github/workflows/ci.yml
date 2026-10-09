@@ -22,10 +22,20 @@ jobs:
       - name: Instalar dependências
         # torch em CPU: a roda padrão do PyPI traz CUDA e estoura o disco do
         # runner. O índice CPU-only do PyTorch resolve em uma fração do tempo.
+        #
+        # torch e torchvision entram na MESMA resolução, e por isso o índice
+        # CPU é o principal e o PyPI o secundário. Instalar só o torch pelo
+        # índice CPU e deixar o timm puxar o torchvision do PyPI produz um par
+        # descasado, e a importação quebra no registro do kernel:
+        #   RuntimeError: ... torchvision::nms ... Meta dispatch key
         run: |
-          pip install --index-url https://download.pytorch.org/whl/cpu torch
-          pip install -r backend/requirements.txt -r scraper/requirements.txt
-          pip install ruff pytest-cov nbclient
+          pip install \
+            --index-url https://download.pytorch.org/whl/cpu \
+            --extra-index-url https://pypi.org/simple \
+            torch torchvision \
+            -r backend/requirements.txt -r scraper/requirements.txt \
+            ruff pytest-cov nbclient
+          python -c "import torch, torchvision; print('torch', torch.__version__, '| torchvision', torchvision.__version__)"
 
       - name: Ruff
         run: ruff check .
