@@ -42,8 +42,44 @@ URL_PADRAO = (
 ESPERADOS = ("dataset_lpf.json", "images")
 
 
+class DownloadIndisponivel(RuntimeError):
+    """O pacote nao esta acessivel — com a explicacao do porque."""
+
+
 def baixar(url: str, alvo: Path) -> None:
-    print(f"baixando {url}")
+    print(f"baixando {url}", flush=True)
+    try:
+        _baixar(url, alvo)
+    except urllib.error.HTTPError as erro:
+        if erro.code == 404:
+            # 404 aqui quase sempre significa uma destas duas coisas, e a
+            # diferenca importa: um traceback de urllib nao ajuda ninguem.
+            raise DownloadIndisponivel(
+                "\n".join(
+                    [
+                        f"o pacote nao foi encontrado em {url}",
+                        "",
+                        "Duas causas possiveis:",
+                        "  1. O release ainda nao existe. Crie um release com a tag",
+                        "     'dataset-v1' e anexe xiloscan_dataset.zip.",
+                        "  2. O repositorio e privado. O GitHub responde 404 (e nao 403)",
+                        "     para quem baixa um asset de repositorio privado sem",
+                        "     autenticacao, mesmo sendo o dono. Torne o repositorio",
+                        "     publico, ou baixe o .zip pelo navegador e instale com:",
+                        "       python scripts/download_dataset.py --arquivo caminho/do.zip",
+                        "",
+                        "Para regerar tudo da fonte primaria, em vez de baixar:",
+                        "  python -m scraper.lpf_scraper --saida data/dataset_lpf.json"
+                        " --imagens data/images",
+                    ]
+                )
+            ) from erro
+        raise DownloadIndisponivel(f"{url} respondeu HTTP {erro.code} ({erro.reason})") from erro
+    except urllib.error.URLError as erro:
+        raise DownloadIndisponivel(f"nao foi possivel alcancar {url}: {erro.reason}") from erro
+
+
+def _baixar(url: str, alvo: Path) -> None:
     with urllib.request.urlopen(url) as resposta, alvo.open("wb") as saida:  # noqa: S310
         total = int(resposta.headers.get("Content-Length") or 0)
         lidos = 0
@@ -84,7 +120,11 @@ def main(argv: list[str] | None = None) -> int:
         if args.arquivo:
             shutil.copyfile(args.arquivo, temporario)
         else:
-            baixar(args.url, temporario)
+            try:
+                baixar(args.url, temporario)
+            except DownloadIndisponivel as erro:
+                print(f"ERRO: {erro}", file=sys.stderr)
+                return 1
 
         print(f"sha256: {sha256(temporario)}")
 
